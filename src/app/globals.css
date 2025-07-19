@@ -24,3 +24,39 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 追加：Footer用グラデーションアニメ */
+@keyframes footerGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 追加：フッターでカスタムクラスとしても使いたい場合（例） */
+.footer-animated-bg {
+  background: linear-gradient(120deg, #24293d 0%, #223454 35%, #3a445c 60%, #1b222a 100%);
+  background-size: 200% 200%;
+  animation: footerGradientFlow 16s ease-in-out infinite;
+}
+@keyframes footerShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.footer-glossy {
+  background: linear-gradient(120deg, #191c21 0%, #22262b 40%, #2c3139 70%, #111215 100%);
+  background-size: 300% 300%;
+  animation: footerShine 15s ease-in-out infinite;
+  box-shadow: 0 -3px 32px 0 #50b6ff44 inset, 0 2px 16px 0 #232c5b55;
+  position: relative;
+  overflow: hidden;
+}
+.footer-glossy::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, #7fd5ff99, transparent);
+  filter: blur(6px);
+  opacity: 0.85;
+  pointer-events: none;
+}
