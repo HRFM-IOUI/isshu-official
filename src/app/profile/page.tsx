@@ -19,7 +19,7 @@ export default function ProfilePage() {
         >
           <div className="relative w-full aspect-[3/4] rounded-xl shadow-2xl overflow-hidden bg-gradient-to-br from-[#1976d2]/60 via-[#43a3ff]/10 to-[#000]/20">
             <img
-              src="/main_00_pc.png"
+              src="/bear profile.png"
               alt="菅原一秀 プロフィール写真"
               className="w-full h-full object-cover rounded-xl shadow-xl mix-blend-luminosity hover:scale-105 transition-transform duration-500"
               draggable={false}
